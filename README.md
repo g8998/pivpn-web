@@ -40,13 +40,13 @@ curl -L https://install.pivpn.io | bash
 ```bash
 sudo apt-get update && sudo apt-get install apache2 php git
 ```
-3.  Edit de file `/etc/apache/apache2.conf`  and change the default user and group to your user and group.
+3.  Edit de file `/etc/apache2/apache2.conf`  and change the default user and group to your user and group.
 
 ```bash
 User "your-username"
 Group "your-group"
 ```
-4. Restart apache: `sudo service restart apache2`
+4. Restart apache: `sudo service apache2 restart`
 5. Move to the apache directory: `cd /var/www/html/`
 6. Clone the repository: `git clone https://github.com/g8998/pivpn-web.git` 
 7. If your user need the password for sudo commands create the file:
