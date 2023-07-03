@@ -71,7 +71,7 @@ sudo cat /etc/openvpn/easy-rsa/pki/index.txt | grep '^V' | tail -n +2 | while re
 	fi
 	echo "<div id='divFileOverlay$NAME' class='hidden'></div>"
 	echo "<div id='divFile$NAME' class='hidden'><h3 style='text-align: left'>Config File $NAME</h3><pre id='copy$NAME'>$escapedConfigFile</pre><button onclick=\"copyText('$NAME')\">Copy</button><button onclick=\"closeElements('divFile$NAME','divFileOverlay$NAME'); return false;\">Close</button></div>"
-	echo "<a class='custom-btn btn' href='#' onclick=\"mostrarElements('divFile$NAME', 'divFileOverlay$NAME'); return false;\"><svg class='buttons-svg' width=\"28\" height=\"100%\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" > <path d=\"M7 18H17V16H7V18Z\" fill=\"currentColor\" /> <path d=\"M17 14H7V12H17V14Z\" fill=\"currentColor\" /> <path d=\"M7 10H11V8H7V10Z\" fill=\"currentColor\" /> <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6 2C4.34315 2 3 3.34315 3 5V19C3 20.6569 4.34315 22 6 22H18C19.6569 22 21 20.6569 21 19V9C21 5.13401 17.866 2 14 2H6ZM6 4H13V9H19V19C19 19.5523 18.5523 20 18 20H6C5.44772 20 5 19.5523 5 19V5C5 4.44772 5.44772 4 6 4ZM15 4.10002C16.6113 4.4271 17.9413 5.52906 18.584 7H15V4.10002Z\" fill=\"currentColor\" /> </svg></a>"
+	echo "<a class='custom-btn btn' href='#' onclick=\"show-div('divFile$NAME', 'divFileOverlay$NAME'); return false;\"><svg class='buttons-svg' width=\"28\" height=\"100%\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" > <path d=\"M7 18H17V16H7V18Z\" fill=\"currentColor\" /> <path d=\"M17 14H7V12H17V14Z\" fill=\"currentColor\" /> <path d=\"M7 10H11V8H7V10Z\" fill=\"currentColor\" /> <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6 2C4.34315 2 3 3.34315 3 5V19C3 20.6569 4.34315 22 6 22H18C19.6569 22 21 20.6569 21 19V9C21 5.13401 17.866 2 14 2H6ZM6 4H13V9H19V19C19 19.5523 18.5523 20 18 20H6C5.44772 20 5 19.5523 5 19V5C5 4.44772 5.44772 4 6 4ZM15 4.10002C16.6113 4.4271 17.9413 5.52906 18.584 7H15V4.10002Z\" fill=\"currentColor\" /> </svg></a>"
 
         echo "<script>"
         echo "  function copyText(copy) {"
@@ -89,7 +89,7 @@ sudo cat /etc/openvpn/easy-rsa/pki/index.txt | grep '^V' | tail -n +2 | while re
         echo "</script>"
 
         echo "<script>"
-	echo "function mostrarElements(name, overlay) {"
+	echo "function show-div(name, overlay) {"
         echo "  var element = document.getElementById(name);"
 	echo "  element.classList.remove('hidden');"
 	echo "  var overlayElement = document.getElementById(overlay);"
@@ -130,7 +130,7 @@ sudo cat /etc/openvpn/easy-rsa/pki/index.txt | grep '^V\|^E' | tail -n +2 | whil
         escapedConfigFile=$(echo "$configFile" | sed 's/</\&lt;/g; s/>/\&gt;/g')
         echo "<div id='divFileOverlay$NAME' class='hidden'></div>"
         echo "<div id='divFile$NAME' class='hidden'><h3 style='text-align: left'>Config File $NAME</h3><pre id='copy$NAME'>$escapedConfigFile</pre><button onclick=\"copyText('$NAME')\">Copy</button><button onclick=\"closeElements('divFile$NAME','divFileOverlay$NAME'); return false;\">Close</button></div>"
-        echo "<a class='custom-btn btn' href='#' onclick=\"mostrarElements('divFile$NAME', 'divFileOverlay$NAME'); return false;\"><svg class='buttons-svg' width=\"28\" height=\"100%\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" > <path d=\"M7 18H17V16H7V18Z\" fill=\"currentColor\" /> <path d=\"M17 14H7V12H17V14Z\" fill=\"currentColor\" /> <path d=\"M7 10H11V8H7V10Z\" fill=\"currentColor\" /> <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6 2C4.34315 2 3 3.34315 3 5V19C3 20.6569 4.34315 22 6 22H18C19.6569 22 21 20.6569 21 19V9C21 5.13401 17.866 2 14 2H6ZM6 4H13V9H19V19C19 19.5523 18.5523 20 18 20H6C5.44772 20 5 19.5523 5 19V5C5 4.44772 5.44772 4 6 4ZM15 4.10002C16.6113 4.4271 17.9413 5.52906 18.584 7H15V4.10002Z\" fill=\"currentColor\" /> </svg></a>"
+        echo "<a class='custom-btn btn' href='#' onclick=\"show-div('divFile$NAME', 'divFileOverlay$NAME'); return false;\"><svg class='buttons-svg' width=\"28\" height=\"100%\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" > <path d=\"M7 18H17V16H7V18Z\" fill=\"currentColor\" /> <path d=\"M17 14H7V12H17V14Z\" fill=\"currentColor\" /> <path d=\"M7 10H11V8H7V10Z\" fill=\"currentColor\" /> <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6 2C4.34315 2 3 3.34315 3 5V19C3 20.6569 4.34315 22 6 22H18C19.6569 22 21 20.6569 21 19V9C21 5.13401 17.866 2 14 2H6ZM6 4H13V9H19V19C19 19.5523 18.5523 20 18 20H6C5.44772 20 5 19.5523 5 19V5C5 4.44772 5.44772 4 6 4ZM15 4.10002C16.6113 4.4271 17.9413 5.52906 18.584 7H15V4.10002Z\" fill=\"currentColor\" /> </svg></a>"
 
         echo "<script>"
         echo "  function copyText(copy) {"
@@ -148,7 +148,7 @@ sudo cat /etc/openvpn/easy-rsa/pki/index.txt | grep '^V\|^E' | tail -n +2 | whil
         echo "</script>"
 
         echo "<script>"
-        echo "function mostrarElements(name, overlay) {"
+        echo "function show-div(name, overlay) {"
         echo "  var element = document.getElementById(name);"
         echo "  element.classList.remove('hidden');"
         echo "  var overlayElement = document.getElementById(overlay);"
