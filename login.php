@@ -6,7 +6,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = $_POST['password'];
 
     $command = './app/script.sh "'.$user.'" "'.$password.'"';
-//    $command = './app/bin/chkpasswd "'.$user.'" "'.$password.'"';
     $output = shell_exec($command);
 
     if (trim($output) === 'Authenticated') {
