@@ -1,7 +1,7 @@
 
 # PiVPN Web (OpenVPN)
 
-PiVPN Web is a service that allows you to manage users for PiVPN. With this service, you can create, enable, disable users, as well as download or copy the configuration file for your PiVPN setup.
+PiVPN Web is a service that allows you to manage users for PiVPN. With this service, you can create, remove, enable, disable users, as well as download or copy the configuration file for your PiVPN setup.
 
 ![Screenshot](https://github.com/g8998/pivpn-web/assets/135697447/0fd20246-ffe4-4bc6-957d-4e7e73aa599e)
 
