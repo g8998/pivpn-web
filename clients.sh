@@ -125,43 +125,7 @@ sudo cat /etc/openvpn/easy-rsa/pki/index.txt | grep '^V\|^E' | tail -n +2 | whil
         fi
         EXPD_FORMATTED=$(date -d "20$EXPD" +"%b %d %Y")
         echo "<tr><td class='border-bottom'>$NAME ($EXPD_FORMATTED)</td>"
-        echo "<td class='border-bottom right'><a class='custom-btn btn' href='app/download.php?file=$NAME.ovpn'><svg class='buttons-svg' xmlns=\"http://www.w3.org/2000/svg\" width=\"28\" height=\"100%\" fill=\"currentColor\" class=\"bi bi-download\" viewBox=\"0 0 16 16\"> <path d=\"M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z\"/> <path d=\"M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z\"/> </svg></a>"
-        configFile=$(cat /home/$IUSER/ovpns/$NAME.ovpn)
-        escapedConfigFile=$(echo "$configFile" | sed 's/</\&lt;/g; s/>/\&gt;/g')
-        echo "<div id='divFileOverlay$NAME' class='hidden'></div>"
-        echo "<div id='divFile$NAME' class='hidden'><h3 style='text-align: left'>Config File $NAME</h3><pre id='copy$NAME'>$escapedConfigFile</pre><button onclick=\"copyText('$NAME')\">Copy</button><button onclick=\"closeElements('divFile$NAME','divFileOverlay$NAME'); return false;\">Close</button></div>"
-        echo "<a class='custom-btn btn' href='#' onclick=\"show-div('divFile$NAME', 'divFileOverlay$NAME'); return false;\"><svg class='buttons-svg' width=\"28\" height=\"100%\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" > <path d=\"M7 18H17V16H7V18Z\" fill=\"currentColor\" /> <path d=\"M17 14H7V12H17V14Z\" fill=\"currentColor\" /> <path d=\"M7 10H11V8H7V10Z\" fill=\"currentColor\" /> <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6 2C4.34315 2 3 3.34315 3 5V19C3 20.6569 4.34315 22 6 22H18C19.6569 22 21 20.6569 21 19V9C21 5.13401 17.866 2 14 2H6ZM6 4H13V9H19V19C19 19.5523 18.5523 20 18 20H6C5.44772 20 5 19.5523 5 19V5C5 4.44772 5.44772 4 6 4ZM15 4.10002C16.6113 4.4271 17.9413 5.52906 18.584 7H15V4.10002Z\" fill=\"currentColor\" /> </svg></a>"
-
-        echo "<script>"
-        echo "  function copyText(copy) {"
-        echo "    var pre = document.getElementById('copy' + copy);"
-        echo "    var contingut = pre.innerText;"
-        echo "    var tempInput = document.createElement('textarea');"
-        echo "    tempInput.value = contingut;"
-        echo "    document.body.appendChild(tempInput);"
-        echo "    tempInput.select();"
-        echo "    tempInput.setSelectionRange(0, 99999);"
-        echo "    document.execCommand('copy');"
-        echo "    document.body.removeChild(tempInput);"
-        echo "    alert('Text copied!');"
-        echo "  }"
-        echo "</script>"
-
-        echo "<script>"
-        echo "function show-div(name, overlay) {"
-        echo "  var element = document.getElementById(name);"
-        echo "  element.classList.remove('hidden');"
-        echo "  var overlayElement = document.getElementById(overlay);"
-        echo "  overlayElement.classList.remove('hidden');"
-        echo "}"
-        echo "function closeElements(close, overlay) {"
-        echo "  var close = document.getElementById(close);"
-        echo "  close.classList.add('hidden');"
-        echo "  var overlayElement = document.getElementById(overlay);"
-        echo "  overlayElement.classList.add('hidden');"
-        echo "}"
-        echo "</script>"
-        echo "<a class='custom-btn btn' href='app/revoke.php?name=$NAME' onclick=\"return confirm('Are you sure to remove the user $NAME?')\"><svg class='buttons-svg' xmlns=\"http://www.w3.org/2000/svg\" width=\"28\" height=\"100%\" fill=\"currentColor\" class=\"bi bi-trash\" viewBox=\"0 0 16 16\"> <path d=\"M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z\"/> <path fill-rule=\"evenodd\" d=\"M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z\"/> </svg></a>"
+        echo "<td class='border-bottom right'><a class='custom-btn btn' href='app/revoke.php?name=$NAME' onclick=\"return confirm('Are you sure to remove the user $NAME?')\"><svg class='buttons-svg' xmlns=\"http://www.w3.org/2000/svg\" width=\"28\" height=\"100%\" fill=\"currentColor\" class=\"bi bi-trash\" viewBox=\"0 0 16 16\"> <path d=\"M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z\"/> <path fill-rule=\"evenodd\" d=\"M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z\"/> </svg></a>"
         echo "</td></tr>"
     fi
 done
