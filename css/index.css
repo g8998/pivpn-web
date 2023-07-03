@@ -37,7 +37,6 @@ td {
 .transparent {
   opacity: 0;
 }
-/* button */
 .custom-btn {
   width: 40px;
   height: 40px;
@@ -105,7 +104,6 @@ td {
   background: #fff;
   box-shadow: 14px 14px 20px #cbced1, -8px -8px 8px rgba(0, 0, 0, 0.06);
 }
-/* nav */
 nav {
   width: 750px;
   margin: auto;
@@ -178,7 +176,6 @@ a {
 .hidden {
   display: none;
 }
-/* popup */
 #popup {
   position: relative;
   width: 350px;
@@ -266,67 +263,6 @@ a {
   border-radius: 20px;
   z-index: 10000;
 }
-/* toggle button */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 30px;
-  height: 17px;
-}
-
-.switch input { 
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ecf0f3;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 13px;
-  width: 13px;
-  left: 2px;
-  bottom: 2px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: #1a3865;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #1a3865;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(13px);
-  -ms-transform: translateX(13px);
-  transform: translateX(13px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 17px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-/* Toggle Button */
 [id^="toggleButton"] {
   display: inline-block;
   width: 45px;
@@ -356,7 +292,6 @@ input:checked + .slider:before {
 [id^="toggleButton"].active:before {
   left: 21.75px;
 }
-/* show div */
 [id^="divFile"] {
   position: fixed;
   width: 542px;
@@ -424,7 +359,6 @@ pre {
   height:400px;
   overflow:auto;
 }
-/* Mobile */
 .mobile nav {
   width: 95%;
 }
