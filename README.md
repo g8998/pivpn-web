@@ -58,7 +58,7 @@ Group "your-group"
 
 To use PiVPN Web, follow these steps:
 
-1.   Open your web browser and navigate to `http://localhost` (or the appropriate IP address if running remotely).
+1.   Open your web browser and navigate to `http://localhost/pivpn-web/` (or the appropriate IP address if running remotely).
 2. Sign in with your user's credentials.
 
 That's it! You can now manage your PiVPN users easily with PiVPN Web. Enjoy!
