@@ -48,7 +48,7 @@ Group "your-group"
 ```
 4. Restart apache: `sudo service restart apache2`
 5. Move to the apache directory: `cd /var/www/html/`
-6. Clone the repository: `git clone https://github.com/g8998/pivpn-web` 
+6. Clone the repository: `git clone https://github.com/g8998/pivpn-web.git` 
 7. If your user need the password for sudo commands create the file:
 `/etc/sudoers.d/"your-username"` with this content:
 ```bash
