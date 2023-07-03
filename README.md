@@ -3,7 +3,7 @@
 
 PiVPN Web is a service that allows you to manage users for PiVPN. With this service, you can create, enable, disable users, as well as download or copy the configuration file for your PiVPN setup.
 
-![Screenshot](https://github.com/g8998/pivpn-web/assets/135697447/2000e3ec-79dc-402e-9dcf-9696dfa9ecc5)
+![Screenshot](https://github.com/g8998/pivpn-web/assets/135697447/0fd20246-ffe4-4bc6-957d-4e7e73aa599e)
 
 ## Functions
 
@@ -13,6 +13,7 @@ PiVPN Web provides the following functions:
 -   Create a new user: Create a new user for your PiVPN setup.
 -   Enable user: Enable an existing user to allow VPN access.
 -   Disable user: Disable an existing user to revoke VPN access.
+-   Delete user: Remove an existing user from your PiVPN setup.
 -   Download configuration file: Download the configuration file for a specific user.
 -   Copy configuration: Copy the configuration file for a specific user to the clipboard.
 - View connected clients: See the status of clients currently connected to the VPN.
