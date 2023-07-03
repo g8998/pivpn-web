@@ -1,6 +1,7 @@
 <?php
 require_once 'auth.php';
 ?>
+
 <?php
 $file = $_GET['file'];
 
@@ -9,10 +10,10 @@ $command = "ip=\$(sudo sed -n 's/ifconfig-push \(.*\) .*/\\1/p' /etc/openvpn/ccd
 $output = shell_exec($command);
 
 if ($output == null) {
-  ob_start();
-  include_once 'index.php';
-  $currentPath = rtrim(dirname($_SERVER['PHP_SELF']), '/');
-  header("Refresh:0, URL=$currentPath/../index.php");
+    ob_start();
+    include_once 'index.php';
+    $currentPath = rtrim(dirname($_SERVER['PHP_SELF']), '/');
+    header("Refresh:0, URL=$currentPath/../index.php");
 } else {
     $logFilePath = '../logs/error.log';
     $errorMessage = 'Error disabling user: Check if the file '.$file.' exists in the directory "/etc/openvpn/ccd/" or if it has the necessary permissions.';
@@ -21,5 +22,6 @@ if ($output == null) {
 
     echo $errorMessage;
 }
+
 ob_end_clean();
 ?>
