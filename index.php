@@ -1,3 +1,6 @@
+<?php
+require_once 'app/auth.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
