@@ -1,4 +1,7 @@
 <?php
+require_once 'auth.php';
+?>
+<?php
 $file = $_GET['file'];
 
 $command = "ip=\$(sudo sed -n 's/ifconfig-push \(.*\) .*/\\1/p' /etc/openvpn/ccd/".$file.") && sudo sed -i \"1s/.*/ifconfig-push 0.0.0.1 255.255.255.0/\" /etc/openvpn/ccd/".$file." && sudo sed -i \"\$ a\\#\$ip\" /etc/openvpn/ccd/".$file;
