@@ -1,6 +1,7 @@
 <?php
 require_once 'auth.php';
 ?>
+
 <?php
 $file = $_GET['file'];
 $iuser = exec("sudo cat /etc/pivpn/openvpn/setupVars.conf | grep install_user | sed 's/install_user=//'");
