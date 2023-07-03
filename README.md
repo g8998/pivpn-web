@@ -16,7 +16,7 @@ PiVPN Web provides the following functions:
 - Delete user: Remove an existing user from your PiVPN setup.
 - Download configuration file: Download the configuration file for a specific user.
 - Copy configuration: Copy the configuration file for a specific user to the clipboard.
-- View connected clients: See the remote ip, virtual ip, bytes receiv.
+- View connected clients: See the remote ip, virtual ip, bytes received and sent, and the time connected.
 - The web interface of PiVPN Web is designed to be responsive
 
 ## Requirements
