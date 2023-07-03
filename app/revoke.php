@@ -1,4 +1,7 @@
 <?php
+require_once 'auth.php';
+?>
+<?php
 $name = $_GET['name'];
 
 $output = shell_exec("pivpn -r -y $name");
