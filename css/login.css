@@ -12,7 +12,6 @@ body {
   place-items: center;
   font-family: poppins;
 }
-
 .brand-logo {
   height: 100px;
   width: 100px;
@@ -22,7 +21,6 @@ body {
   box-sizing: border-box;
   box-shadow: 7px 7px 10px #cbced1, -7px -7px 10px white;
 }
-
 .brand-title {
   margin-top: 10px;
   font-weight: 900;
@@ -30,12 +28,10 @@ body {
   color: #1a3865;
   letter-spacing: 1px;
 }
-
 .inputs {
   text-align: left;
   margin-top: 30px;
 }
-
 input, button {
   display: block;
   width: 100%;
@@ -44,11 +40,9 @@ input, button {
   outline: none;
   box-sizing: border-box;
 }
-
 input::placeholder {
   color: gray;
 }
-
 input {
   background: #ecf0f3;
   padding: 10px;
@@ -58,7 +52,6 @@ input {
   border-radius: 50px;
   box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
 }
-
 .button {
   color: white;
   margin-top: 20px;
@@ -70,11 +63,9 @@ input {
   box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
   transition: 0.5s;
 }
-
 .button:hover {
   box-shadow: none;
 }
-
 h1 {
   position: absolute;
   top: 0;
@@ -140,7 +131,6 @@ a {
   font-weight: 900;
   box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
   transition: 0.5s;
-
 }
 .mobile input {
   margin-bottom: 30px;
@@ -152,8 +142,6 @@ a {
   border-radius: 50px;
   box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
 }
-
-
 body:not(.mobile) .container {
   position: relative;
   width: 350px;
